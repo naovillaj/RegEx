@@ -17,9 +17,9 @@
 			<label for="fecha">Fecha de Nacimiento: </label>
 			<input id="fecha" type="date" pattern="" placeholder="Fecha de nacimiento" min="1930/01/01" max="1999/04/27"><br><br>
 			<label for="celular">Celular: </label>
-			<input id="celular" type="tel" pattern="" placeholder="Celular" min="9" max="9"><br><br>
-			<label for="celular">Teléfono: </label>
-			<input id="celular" type="tel" pattern="^[9|8]\d{9}$" placeholder="Teléfono" min="6" max="9"><br><br>
+			<input id="celular" type="tel" pattern="^([9]\d{8})+$" placeholder="Celular" min="9" max="9"><br><br>
+			<label for="telefono">Teléfono: </label>
+			<input id="telefono" type="tel" pattern="^[0-9]+([,][0-9]+)?$" placeholder="Teléfono" min="6" max="9"><br><br>
 			<label for="contraseña">Contraseña: </label>
 			<input id="password" type="password" pattern="" placeholder="Escribe aquí tu contraseña" min="6"><br><br>
 			<label for="contraseña">Confirmación de contraseña: </label>
