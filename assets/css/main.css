@@ -1,5 +1,36 @@
+body {
+	font-family: 'Josefin Sans';
+	font-weight: bold;
+	font-size: 18px;
+}
+
 #formulario{
-	margin: 0 auto;
+	margin: 30px auto;
 	padding: 20px;
 	border: 3px solid black;
+	width: 550px;
+	height: 1200px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.input-regex{
+	border-radius: 15px 15px 15px 15px;
+	width: 280px;
+	padding: 10px 20px;
+	margin: 0 auto;
+	outline: 0;
+	display: block;
+}
+
+.btn{
+	display: block;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding: 5px 20px;
+}
+.btn:hover{
+	transform: scale(1.1);
+	color: #4C4C4C;
+	outline: 0;
 }
