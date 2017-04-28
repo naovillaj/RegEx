@@ -4,39 +4,41 @@
 	<meta charset="UTF-8">
 	<title>RegEx</title>
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Roboto" rel="stylesheet">
+	<link rel="icon" type="image/png" href="assets/img/regex_logo.png" sizes="32x32">
 </head>
 <body>
 	<div id="formulario">
-		<form action="">
+		<form id="validaciones" action="">
 			<label for="nombre">Nombre: </label>
-			<input id="nombre" type="text" pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" placeholder="Escribe aquí tu nombre" required=""><br><br>
+			<input id="nombre" class="input-regex" type="text" pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" placeholder="Escribe aquí tu nombre" title="Primera letra mayúscula seguida de minúsculas" required=""><br><br>
 			<label for="apellido">Apellido: </label>
-			<input id="apellido" type="text" pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" placeholder="Escribe aquí tu apellido" required=""><br><br>
+			<input id="apellido" class="input-regex" type="text" pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" placeholder="Escribe aquí tu apellido" title="Primera letra mayúscula seguida de minúsculas" required=""><br><br>
 			<label for="DNI">DNI: </label>
-			<input id="dni" type="number" pattern="^([0-9]{8})+$" placeholder="Escribe aquí tu DNI" required=""><br><br>
+			<input id="dni" class="input-regex" type="tel" pattern="^([0-9]\d{7})+$" placeholder="Escribe aquí tu DNI" maxlength="8" title="El DNI tiene 8 números" required=""><br><br>
 			<label for="fecha">Fecha de Nacimiento: </label>
-			<input id="fecha" type="date" pattern="" placeholder="Fecha de nacimiento" min="1930/01/01" max="1999/04/27"><br><br>
+			<input id="fecha" class="input-regex" type="date" pattern="" placeholder="Fecha de nacimiento" min="1930-01-01" max="1999-04-27" title="Tienes que tener más de 18 años" required=""><br><br>
 			<label for="celular">Celular: </label>
-			<input id="celular" type="tel" pattern="^([9]\d{8})+$" placeholder="Celular" min="9" max="9"><br><br>
+			<input id="celular" class="input-regex" type="tel" pattern="^([9]\d{8})+$" placeholder="Celular" maxlength="9" title="El celular empieza con 9 seguido de 8 números más" required=""><br><br>
 			<label for="telefono">Teléfono: </label>
-			<input id="telefono" type="tel" pattern="^[0-9]+([,][0-9]+)?$" placeholder="Teléfono" min="6" max="9"><br><br>
+			<input id="telefono" class="input-regex" type="tel" pattern="^([0-9]\d{7})+$" placeholder="Teléfono" maxlength="8" title="El teléfono tiene 8 números" required=""><br><br>
 			<label for="contraseña">Contraseña: </label>
-			<input id="password" type="password" pattern="" placeholder="Escribe aquí tu contraseña" min="6"><br><br>
+			<input id="password" class="input-regex" type="password" pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$" placeholder="Escribe aquí tu contraseña" maxlength="16" title="Min 6 caracteres, máx 16 y 1 caracter especial: !@#$%^" required=""><br><br>
 			<label for="contraseña">Confirmación de contraseña: </label>
-			<input id="cPassword" type="password" pattern="" placeholder="Confirma tu contraseña" min="6"><br><br>
+			<input id="cPassword" class="input-regex" type="password" pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$" placeholder="Confirma tu contraseña" maxlength="16" title="Min 6 caracteres, máx 16 y 1 caracter especial: !@#$%^" required=""><br><br>
 			<label for="comentarios">Comentarios: </label><br>
-			<textarea name="comentario" id="comentario" cols="60" rows="10"></textarea><br><br>
+			<textarea class="input-regex" name="comentario" id="comentario" cols="60" rows="10" required=""></textarea><br><br>
 			<label>
-              <input type="checkbox" value="recuerdame">
-              <span>Términos y condiciones</span>
-            </label><br>
-            <button id="enviar">Enviar</button>
-		</form>		
+            <input type="checkbox" value="recuerdame" required="">
+            <span>Términos y condiciones</span>
+            </label><br><br><br>
+            <button id="enviar" class="btn">Enviar</button>
+		</form>
 	</div>
 
-			
 
-	
+
+
 
 	<script src="assets/js/app.js"></script>
 </body>
