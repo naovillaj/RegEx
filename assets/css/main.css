@@ -4,6 +4,10 @@ body {
 	font-size: 18px;
 }
 
+h1{
+	margin: 30px 0 30px 480px;;
+}
+
 #formulario{
 	margin: 30px auto;
 	padding: 20px;
